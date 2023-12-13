@@ -44,11 +44,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: "npm"
-      - name: Install dependencies with npm
-        run: npm ci
+      # Trying to install dependencies with npm doesn't work
+      - name: Install dependencies with Yarn
+        run: yarn --frozen-lockfile
       - name: Lint
-        run: npm run lint
+        run: yarn lint
   release:
     name: Release
 
