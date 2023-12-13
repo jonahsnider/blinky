@@ -1,34 +1,83 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Blinky
 
-## Getting Started
+![Blinky](./src/assets/blinky.png)
 
-First, run the development server:
+Blinky is a minimal URL shortener/manager.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+You can map long urls to specific subpaths (ex. `/docs` -> `https://example.com`).
+
+## Hosting
+
+### Docker
+
+TODO
+
+### Without Docker
+
+#### First time setup
+
+0. [Install Node.js v20](https://nodejs.org/en/download/)
+
+1. Clone the project
+
+   ```sh
+   git clone https://github.com/jonahsnider/blinky.git
+   ```
+
+2. Install dependencies
+
+   ```sh
+   npm install
+   ```
+
+3. Build the project
+
+   ```sh
+   npm run build
+   ```
+
+4. Set environment variables
+
+   1. Create a `.env` file in the root of this repository
+   2. Set `DATABASE_URL` to a MySQL connection URL, following [this format](https://www.prisma.io/docs/orm/overview/databases/mysql#connection-url)
+   3. Set `ADMIN_PASSWORD` to a password for accessing the admin interface
+   4. Set `BASE_URL` to a well-formed URL where the service is hosted (ex. `https://blinky.example.com`)
+   5. Set `NODE_ENV` to `production` so the server framework takes advantage of non-development features
+
+5. Run database migrations
+
+   ```sh
+   npm run migrate
+   ```
+
+#### Updating
+
+1. Pull the latest changes
+
+   ```sh
+   git pull
+   ```
+
+2. Install dependencies
+
+   ```sh
+    npm install
+   ```
+
+3. Build the project
+
+   ```sh
+   npm run build
+   ```
+
+4. Run database migrations
+
+   ```sh
+   npm run migrate
+   ```
+
+#### Starting the server
+
+```sh
+npm start
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
