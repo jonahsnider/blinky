@@ -10,7 +10,15 @@ You can map long urls to specific subpaths (ex. `/docs` -> `https://example.com`
 
 ### Docker
 
-TODO
+A Docker image is available on [Docker Hub](https://hub.docker.com/r/jonahsnider/blinky) as `jonahsnider/blinky`.
+
+It requires the following environment variables to be set:
+
+- `DATABASE_URL`
+- `ADMIN_PASSWORD`
+- `BASE_URL`
+
+Please see below installation instructions for information on what these should be defined as.
 
 ### Without Docker
 
