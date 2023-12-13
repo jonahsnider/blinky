@@ -12,7 +12,7 @@
 		[
 			"@semantic-release/exec",
 			{
-				"prepareCmd": "docker tag jonahsnider/blinky:latest jonahsnider/blinky:${nextRelease.version}",
+				"prepareCmd": "npm run build:nixpack && docker tag jonahsnider/blinky:latest jonahsnider/blinky:${nextRelease.version}",
 				"publishCmd": "docker push jonahsnider/blinky:latest && docker push jonahsnider/blinky:${nextRelease.version}"
 			}
 		]
