@@ -12,7 +12,8 @@
 		[
 			"@semantic-release/exec",
 			{
-				"prepareCmd": "docker push jonahsnider/blinky:latest && docker push jonahsnider/blinky:${nextRelease.version}"
+				"prepareCmd": "docker tag jonahsnider/blinky:latest jonahsnider/blinky:${nextRelease.version}",
+				"publishCmd": "docker push jonahsnider/blinky:latest && docker push jonahsnider/blinky:${nextRelease.version}"
 			}
 		]
 	]
