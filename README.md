@@ -78,6 +78,14 @@ TODO
 
 #### Starting the server
 
+Start the server:
+
 ```sh
 npm start
+```
+
+The `PORT` environment variable can be defined (not in `.env`) to set what port the server will listen on:
+
+```sh
+PORT=8080 npm start
 ```
