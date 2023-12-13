@@ -46,7 +46,7 @@ jobs:
           node-version: 20
           cache: "npm"
       - name: Install dependencies with npm
-        run: npm install
+        run: npm ci
       - name: Lint
         run: npm run lint
   release:
