@@ -46,11 +46,24 @@ Please see below installation instructions for information on what these should 
 
 4. Set environment variables
 
-   1. Create a `.env` file in the root of this repository
-   2. Set `DATABASE_URL` to a MySQL connection URL, following [this format](https://www.prisma.io/docs/orm/overview/databases/mysql#connection-url)
-   3. Set `ADMIN_PASSWORD` to a password for accessing the admin interface
-   4. Set `BASE_URL` to a well-formed URL where the service is hosted (ex. `https://blinky.example.com`)
-   5. Set `NODE_ENV` to `production` so the server framework takes advantage of non-development features
+   The server needs a few environment variables to be defined in order to function:
+
+   | Variable         | Description                                                                                                             |
+   | ---------------- | ----------------------------------------------------------------------------------------------------------------------- |
+   | `DATABASE_URL`   | A MySQL connection URL, following [this format](https://www.prisma.io/docs/orm/overview/databases/mysql#connection-url) |
+   | `ADMIN_PASSWORD` | A password for accessing the admin interface                                                                            |
+   | `BASE_URL`       | A well-formed URL where the service is hosted (ex. `https://blinky.example.com`)                                        |
+
+   You can either define these directly in your system environment, or use a `.env` file in the project root:
+
+   ```sh
+    # .env
+   DATABASE_URL=mysql://user:password@host:port/database
+   ADMIN_PASSWORD=password
+   BASE_URL=https://blinky.example.com
+   ```
+
+   Documentation for how `.env` is parsed is [here](https://nextjs.org/docs/app/building-your-application/configuring/environment-variables#loading-environment-variables).
 
 5. Run database migrations
 
