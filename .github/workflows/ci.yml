@@ -20,7 +20,7 @@ jobs:
       - name: Install dependencies with npm
         run: npm ci
       - name: Cache Next.js
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: |
             ${{ github.workspace }}/.next/cache
