@@ -28,7 +28,7 @@
 		"prisma": "5.18.0",
 		"react": "18.3.1",
 		"react-dom": "18.3.1",
-		"sharp": "0.33.4",
+		"sharp": "0.33.5",
 		"swr": "2.2.5",
 		"tailwindcss": "3.4.10",
 		"type-fest": "4.24.0",
